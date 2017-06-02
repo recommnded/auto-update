@@ -1,0 +1,250 @@
+/*
+@font-face {
+  font-family: "FuturaPT-Book";
+  src: url("/assets/fonts/FuturaPTBook.woff") format("woff"),
+    url("/assets/fonts/FuturaPTBook.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaPT-Demi";
+  src: url("assets/fonts/FuturaPTDemi.woff") format("woff"),
+    url("assets/fonts/FuturaPTDemi.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaPT-Heavy";
+  src: url("assets/fonts/FuturaPTHeavy.woff") format("woff"),
+    url("assets/fonts/FuturaPTHeavy.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaPT-Light";
+  src: url("assets/fonts/FuturaPTLight.woff") format("woff"),
+    url("assets/fonts/FuturaPTLight.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "FuturaPT-Medium";
+  src: url("assets/fonts/FuturaPTMedium.woff") format("woff"),
+    url("assets/fonts/FuturaPTMedium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+/*****************/
+/*     BASE     */
+/*****************/
+* {
+  font-family: 'Futura', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+}
+
+html, body, p, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #51ab50;
+  font-size: 16px;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+body {
+  background: #111;
+  color: #eee;
+  margin: 0;
+  padding: 0 10px;
+}
+
+
+/*****************/
+/*    HEADER     */
+/*****************/
+header {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 18px;
+}
+
+.login {
+  align-self: flex-end;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.login .icon {
+  margin-left: 10px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+
+/*****************/
+/*    CONTENT    */
+/*****************/
+.content {
+  display: flex;
+}
+
+.content-left {
+  margin-right: 20px;
+}
+
+
+/*****************/
+/*     VIDEO     */
+/*****************/
+.video {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.video video {
+  max-width: 100%;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+    display: none;
+}
+video::-webkit-media-controls-panel {
+  background: black;
+}
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display {
+  color: white;
+}
+
+.question {
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-shadow: 0 0 2px black;
+  line-height: 1.7;
+  text-align: center;
+  padding: 10px 20px;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+
+/*****************/
+/*    DETAILS    */
+/*****************/
+.details-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.details {
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(0,0,0,0.8);
+  border-bottom: 3px solid #51ab50;
+  transition: max-height 500ms ease;
+}
+.details.expanded {
+  max-height: 300px;
+}
+
+.details-content {
+  margin: 20px 20px 30px;
+  display: flex;
+}
+
+.details-toggle {
+  background: #51ab50;
+  color: white;
+  border: 0 none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 5px 15px 7px;
+  margin-left: calc(50% - 85px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  border-radius: 0 0 4px 4px;
+  cursor: pointer;
+  outline: 0 none;
+  width: 170px;
+}
+.details-toggle:hover {
+  background: #189638;
+}
+.details-toggle:focus {
+  outline: 0 none;
+}
+
+.details-content dl {
+  margin: 0;
+  padding: 0;
+}
+
+.details-content dt {
+  color: #999;
+  font-size: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  letter-spacing: 2px;
+  display: block;
+  margin-top: 25px;
+}
+
+.details-content dd {
+  color: white;
+  font-size: 16px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.candidate {
+  margin-right: 70px;
+}
+
+
+
+/*****************/
+/*      ADS      */
+/*****************/
+.ad-side {
+  width: 300px;
+}
+
+.ad-side img {
+  max-width: 100%;
+}
+
+.ad-bottom img {
+  width: 100%;
+}

@@ -1,2 +1,9 @@
-videos/*
-
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+###################
+videos/
+node_modules/

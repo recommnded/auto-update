@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Recommnded</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1 class="logo">Recommnded</h1>
+        <div class="login">
+          Dave Brennan
+          <img class="icon" src="assets/icons/user.png" />
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="content-left">
+          <div class="video">
+            <video src="assets/videos/ref1.mov" controls="true" id="video"></video>
+            <ol class="questions" id="questions">
+              <li class="question" data-start="8"   data-end="22">What is your professional relationship to the candidate and was there a reporting replationship?</li>
+              <li class="question" data-start="27"  data-end="87">Can you think of a specific example of a complex project in which the candidate worked? Do you have any insight into how they approached it and what was the end result of the project?</li>
+              <li class="question" data-start="92"  data-end="120">How well does this candidate handle pressure, stress and criticsm? Any particular anecodotes?</li>
+              <li class="question" data-start="124" data-end="172">Can you give me an example of the candidate's commitment or tenacity?</li>
+              <li class="question" data-start="177" data-end="202">How many people would you estimate would be in this person peer group, either inside the reference company or throughout your career doing similar work?</li>
+              <li class="question" data-start="206" data-end="223">How would you rank the candidate among the peer group?</li>
+              <li class="question" data-start="228" data-end="254">How would you rank the candidate's integrity?</li>
+              <li class="question" data-start="259" data-end="281">Is there any other information you would like to share that would be helpful in our consideration of this candidate?</li>
+            </ol>
+            <div class="details-container">
+              <div class="details" id="details">
+                <div class="details-content">
+                  <div class="candidate">
+                    <h2>Candidate</h2>
+                    <dl>
+                      <dt>Name</dt>
+                      <dd>Howard Smith</dd>
+                      <dt>Company / Title</dt>
+                      <dd>Citibank &bull; Key Account Manager</dd>
+                      <dt>Email / Phone</dt>
+                      <dd>h.smith@gmail.com &bull; (415) 769-3324</dd>
+                    </dl>
+                  </div>
+                  <div class="reference">
+                    <h2>Reference</h2>
+                    <dl>
+                      <dt>Name</dt>
+                      <dd>Ed Jackson</dd>
+                      <dt>Company / Title</dt>
+                      <dd>Citibank &bull; Key Account Manager</dd>
+                      <dt>Time Worked With</dt>
+                      <dd>15 years</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <button class="details-toggle" id="details_toggle">show candidate details</button>
+            </div>
+          </div>
+          <div class="ad-bottom">
+            <img src="assets/ads/netpolarity-728x90.png" />
+          </div>
+        </div>
+        <div class="cotent-right">
+          <div class="ad-side">
+            <img src="assets/ads/netpolarity-300x600.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+  <script src="assets/jquery.min.js"></script>
+  <script src="assets/index.js" defer></script>
+  <script>if (window.module) module = window.module;</script>
+</html>

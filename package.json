@@ -1,0 +1,14 @@
+{
+  "name": "Recommnded",
+  "version": "1.0.1",
+  "description": "Advocacy on Demand",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Recommnded Inc.",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  }
+}
