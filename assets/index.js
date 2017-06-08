@@ -40,6 +40,14 @@ $(function() {
     });
   }
 
+  // function resetAdminData(file) {
+  //   storage.remove(file, err => {
+  //     if (err) {
+  //       console.log(err)
+  //     }
+  //   });
+  // }
+
   function showAds(data) {
     setAd('bottom', data.adminData.adUrls.bottom);
     setAd('side', data.adminData.adUrls.side);
@@ -104,6 +112,9 @@ $(function() {
   $("#admin_hide").on("click", function(e) {
     $("#admin_modal").addClass("hidden");
   });
+  // $("#admin_reset").on("click", function(e) {
+  //   resetAdminData(adminFile);
+  // });
   $("#admin_update").on("click", function(e) {
     var ads = {
       bottom: $("input[name='ad_bottom']").val(),
