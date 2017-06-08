@@ -54,6 +54,13 @@ html, body, p, h1, h2, h3, h4 {
   padding: 0;
 }
 
+body {
+  background: #111;
+  color: #eee;
+  margin: 0;
+  padding: 0 10px;
+}
+
 h2 {
   color: #51ab50;
   font-size: 16px;
@@ -66,11 +73,26 @@ ul, ol, li {
   list-style: none;
 }
 
-body {
-  background: #111;
-  color: #eee;
-  margin: 0;
-  padding: 0 10px;
+label {
+  color: #999;
+  font-size: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  letter-spacing: 2px;
+  display: block;
+  margin-top: 25px;
+}
+
+input[type="text"] {
+  background: white;
+  border: 1px solid #999;
+  color: #333;
+  font-size: 14px;
+  font-weight:400;
+  padding: 7px 10px 5px;
+  line-height: 1em;
+  border-radius: 1px;
 }
 
 
@@ -113,6 +135,25 @@ header {
 
 .content-left {
   margin-right: 20px;
+}
+
+.button-primary {
+  background: #51ab50;
+  color: white;
+  border: 0 none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 5px 15px 7px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  border-radius: 4px;
+  cursor: pointer;
+  outline: 0 none;
+}
+.button-primary:hover {
+  background: #189638;
+}
+.button-primary:focus {
+  outline: 0 none;
 }
 
 
@@ -233,7 +274,6 @@ video::-webkit-media-controls-time-remaining-display {
 }
 
 
-
 /*****************/
 /*      ADS      */
 /*****************/
@@ -247,4 +287,84 @@ video::-webkit-media-controls-time-remaining-display {
 
 .ad-bottom img {
   width: 100%;
+}
+
+
+/*****************/
+/*     MODAL     */
+/*****************/
+.modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  z-index: 0;
+  transition: opacity ease 500ms, z-index step-start 500ms;
+}
+.modal.hidden {
+  opacity: 0;
+  z-index: -1;
+  transition: opacity ease 500ms, z-index step-end 500ms;
+}
+
+.modal-shade {
+  position: fixed;
+  top: -50px;
+  bottom: -50px;
+  right: -50px;
+  left: -50px;
+  background: rgba(0,0,0,0.7);
+  z-index: 999;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  color: #666;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 0 none;
+  background: transparent none;
+}
+.modal-close:hover {
+  color: black;
+}
+
+.modal-content {
+  position: relative;
+  z-index: 1000;
+  padding: 50px;
+  background: #eee;
+  box-shadow: 0 0 10px black;
+}
+
+
+/*****************/
+/*     ADMIN     */
+/*****************/
+.admin-form {
+  margin-top: 20px;
+}
+
+.admin-form p {
+  color: #333;
+  margin-top: 5px;
+}
+
+.admin-form input[type="text"] {
+  width: 500px;
+}
+
+.admin-form button {
+  display: block;
+  margin-top: 50px;
 }

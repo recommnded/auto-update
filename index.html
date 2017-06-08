@@ -11,7 +11,7 @@
         <h1 class="logo">Recommnded</h1>
         <div class="login">
           Matthew Kaliara
-          <img class="icon" src="assets/icons/user.png" />
+          <img class="icon" id="admin_show" src="assets/icons/user.png" />
         </div>
       </header>
 
@@ -60,16 +60,29 @@
             </div>
           </div>
           <div class="ad-bottom">
-            <!-- <img src="assets/ads/netpolarity-728x90.png" /> -->
-            <img src="assets/ads/angel-worldwide-transportation-728x90.jpg" />
+            <img id="ad_bottom" src="assets/ads/recommnded-728x90.png" />
           </div>
         </div>
         <div class="cotent-right">
           <div class="ad-side">
-            <!-- <img src="assets/ads/netpolarity-300x600.png" /> -->
-            <img src="assets/ads/angel-worldwide-transportation-300x600.jpg" />
+            <img id="ad_side" src="assets/ads/recommnded-300x600.png" />
           </div>
         </div>
+      </div>
+      <div class="modal hidden" id="admin_modal">
+        <div class="modal-content">
+          <button class="modal-close" id="admin_hide">&times;</button>
+          <div class="admin-form">
+            <h2>Admin</h2>
+            <p>Set the URLs for the ads below:</p>
+            <label>Side Ad (typically 300x600)</label>
+            <input type="text" name="ad_side" placeholder="http://s3.aws.com/directory/file.png "/>
+            <label>Bottom Ad (typically 728x90)</label>
+            <input type="text" name="ad_bottom" placeholder="http://s3.aws.com/directory/file.png "/>
+            <button class="button-primary" id="admin_update">Update</button>
+          </div>
+        </div>
+        <div class="modal-shade"></div>
       </div>
     </div>
   </body>
