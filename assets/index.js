@@ -1,5 +1,4 @@
 // TODO: prepopulate fields if values are set
-// TODO: add reset admin button
 
 $(function() {
   // Load local ads
@@ -21,6 +20,7 @@ $(function() {
       if (err) {
         console.error(err)
       } else {
+        prepopulateFields(data);
         showAds(data);
       }
     });
@@ -43,13 +43,18 @@ $(function() {
     });
   }
 
-  // function resetAdminData(file) {
-  //   storage.remove(file, err => {
-  //     if (err) {
-  //       console.log(err)
-  //     }
-  //   });
-  // }
+  function resetAdminData(file) {
+    storage.remove(file, err => {
+      if (err) {
+        console.log(err)
+      }
+    });
+  }
+
+  function prepopulateFields(data) {
+    $("input[name='ad_bottom']").val(data.adminData.adUrls.bottom);
+    $("input[name='ad_side']").val(data.adminData.adUrls.side);
+  }
 
   function showAds(data) {
     setAd('bottom', data.adminData.adUrls.bottom);
@@ -115,9 +120,10 @@ $(function() {
   $("#admin_hide").on("click", function(e) {
     $("#admin_modal").addClass("hidden");
   });
-  // $("#admin_reset").on("click", function(e) {
-  //   resetAdminData(adminFile);
-  // });
+  $("#admin_reset").on("click", function(e) {
+    resetAdminData(adminFile);
+    alert("Please relaunch app to update")
+  });
   $("#admin_update").on("click", function(e) {
     var ads = {
       bottom: $("input[name='ad_bottom']").val(),
@@ -126,7 +132,14 @@ $(function() {
 
     saveAds(adminFile, ads);
     loadAds(adminFile);
-
     $("#admin_modal").addClass("hidden");
+    alert("Please relaunch app to update")
+  });
+
+  // open links externally by default
+  var shell = require('electron').shell;
+  $(document).on('click', 'a[href^="http"]', function(event) {
+    event.preventDefault();
+    shell.openExternal(this.href);
   });
 });

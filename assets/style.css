@@ -269,6 +269,14 @@ video::-webkit-media-controls-time-remaining-display {
   padding: 0;
 }
 
+.details-content a {
+  color: white;
+  text-decoration: none;
+}
+.details-content a:hover {
+  opacity: 0.5
+}
+
 .candidate {
   margin-right: 70px;
 }

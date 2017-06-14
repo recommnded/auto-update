@@ -1,6 +1,6 @@
 // Module to control application life.
 const electron = require('electron')
-const {app, Menu} = require('electron')
+const {app, Menu, ipcMain} = require('electron')
 
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
