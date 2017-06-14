@@ -1,3 +1,6 @@
+// TODO: prepopulate fields if values are set
+// TODO: add reset admin button
+
 $(function() {
   // Load local ads
   const storage = require('electron-storage');
