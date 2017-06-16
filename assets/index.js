@@ -142,4 +142,36 @@ $(function() {
     event.preventDefault();
     shell.openExternal(this.href);
   });
+
+  // background music while video is playing
+  var playMusic = true;
+  var videoPlaying = false;
+  var maxVolume = 0.15;
+  $("#background_music").animate({ volume: 0 }, 0);
+
+  $("video").bind("playing", function() {
+    videoPlaying = true;
+    if (playMusic) {
+      $("#background_music").animate({ volume: maxVolume }, 2000);
+    }
+  });
+
+  $("video").bind("pause", function() {
+    videoPlaying = false;
+    $("#background_music").animate({ volume: 0 }, 1000);
+  });
+
+  $("#toggle_music").on("click", function() {
+    playMusic = !playMusic;
+    volume = $("#background_music")[0].volume;
+
+    if (playMusic && videoPlaying && (volume === 0)) {
+      $("#toggle_music .js-music-label").html("Turn Music Off");
+      $("#background_music").animate({ volume: maxVolume }, 1000);
+    }
+    else {
+      $("#toggle_music .js-music-label").html("Turn Music On");
+      $("#background_music").animate({ volume: 0 }, 1000);
+    }
+  });
 });

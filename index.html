@@ -9,9 +9,15 @@
     <div class="app-container">
       <header>
         <h1 class="logo">Recommnded</h1>
-        <div class="login">
-          Dave Brennan
-          <img class="icon" id="admin_show" src="assets/icons/user.png" />
+        <div class="utility">
+          <div class="music" id="toggle_music">
+            <span class="js-music-label">Turn Music Off</span>
+            <img class="icon" src="assets/icons/music.png" />
+          </div>
+          <div class="login">
+            Dave Brennan
+            <img class="icon" id="admin_show" src="assets/icons/user.png" />
+          </div>
         </div>
       </header>
 
@@ -19,6 +25,9 @@
         <div class="content-left">
           <div class="video">
             <video src="assets/videos/ref1.mov" controls="true" id="video"></video>
+            <audio id="background_music" loop="true" autoplay="true">
+              <source src="assets/audio/music1.mp3" type='audio/mpeg; codecs="mp3"' />
+            </audio>
             <ol class="questions" id="questions">
               <li class="question" data-start="8"   data-end="22">What is your professional relationship to the candidate and was there a reporting replationship?</li>
               <li class="question" data-start="27"  data-end="87">Can you think of a specific example of a complex project in which the candidate worked? Do you have any insight into how they approached it and what was the end result of the project?</li>

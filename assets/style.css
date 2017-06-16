@@ -112,17 +112,28 @@ header {
   font-size: 18px;
 }
 
-.login {
+.utility {
   align-self: flex-end;
   font-size: 18px;
   font-weight: 300;
 }
 
-.login .icon {
+.utility .icon {
   margin-left: 10px;
   width: 20px;
   display: inline-block;
   vertical-align: text-bottom;
+}
+
+.utility > div {
+  margin-left: 50px;
+  display: inline-block;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.utility > div:hover {
+  opacity: 1;
 }
 
 
