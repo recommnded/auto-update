@@ -287,6 +287,9 @@ video::-webkit-media-controls-time-remaining-display {
 .details-content a:hover {
   opacity: 0.5
 }
+.details-content .linkedin-link {
+  color: #4784fb;
+}
 
 .candidate {
   margin-right: 70px;
