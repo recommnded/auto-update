@@ -146,7 +146,7 @@ $(function() {
   // background music while video is playing
   var playMusic = true;
   var videoPlaying = false;
-  var maxVolume = 0.15;
+  var maxVolume = 0.07;
   $("#background_music").animate({ volume: 0 }, 0);
 
   $("video").bind("playing", function() {
