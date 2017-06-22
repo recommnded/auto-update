@@ -227,7 +227,7 @@ video::-webkit-media-controls-time-remaining-display {
   transition: max-height 500ms ease;
 }
 .details.expanded {
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .details-content {
